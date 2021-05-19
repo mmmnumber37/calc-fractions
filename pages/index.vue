@@ -1,7 +1,11 @@
 <template>
   <div class="main">
     <div class="main__row row mb-3">
-      <div v-for="(item, key) in valueFractions" :key="key" class="main__item">
+      <div
+        v-for="(item, key) in valueFractions"
+        :key="item.id"
+        class="main__item"
+      >
         <span v-if="key > 0" class="main__plus main_big-text mx-3">+</span>
         <fraction
           :view-close="valueFractions.length > 2"
